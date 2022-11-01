@@ -13,6 +13,12 @@ predict:
 python src/predict.py /model/path/*.pkl /data/path/*.csv /output/data/path 
 ~~~
 
+test:
+~~~
+python test/make_test_dataset.py
+python -m unittest test
+~~~
+
 Project Organization
 ------------
 
