@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from marshmallow_dataclass import class_schema
 import yaml
+from entities.training_params import TrainingParams
+from entities.feature_params import FeatureParams
 
 
 @dataclass()
@@ -8,9 +10,9 @@ class Params:
     input_data_path: str
     output_model_path: str
     output_metric_path: str
-    metric_path: str
     val_size: float
-    target_column: str
+    training_params: TrainingParams
+    feature_params: FeatureParams
 
 
 TrainingPipelineParamsSchema = class_schema(Params)

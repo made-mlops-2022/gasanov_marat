@@ -10,8 +10,8 @@ def evaluate_model(predicted_labels: np.ndarray, true_labels: pd.Series) -> dict
             'f1_score': f1_score(predicted_labels, true_labels)}
 
 
-def serialize_metric(predicted_labels: np.ndarray, true_labels: pd.Series, output_path) -> str:
+def serialize_metric(predicted_labels: np.ndarray, true_labels: pd.Series, output_path) -> dict[str: float]:
     metrics_dict = evaluate_model(predicted_labels, true_labels)
     with open(output_path, 'w') as f:
         json.dump(metrics_dict, f)
-    return output_path
+    return metrics_dict

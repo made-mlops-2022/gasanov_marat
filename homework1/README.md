@@ -3,6 +3,16 @@ homework1
 
 gasanov homework1 vk autumn 2022 MLOps bmstu
 
+train:
+~~~
+python src/train.py configs/config1.yaml
+~~~
+
+predict:
+~~~
+python src/predict.py /model/path/*.pkl /data/path/*.csv /output/data/path 
+~~~
+
 Project Organization
 ------------
 

@@ -7,10 +7,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 
-def read_csv_data(csv_path):
+def read_csv_data(csv_path) -> pd.DataFrame:
     data = pd.read_csv(csv_path)
     return data
 
 
 def split_data(data, split_param):
-    return train_test_split(data, split_param)
+    return train_test_split(data, test_size=split_param)
