@@ -1,0 +1,12 @@
+input_data_path: "data/raw/train.csv"
+output_model_path: "models/model.pkl"
+output_metric_path: "models/metrics.json"
+val_size: 0.2
+training_params:
+  loss: 'log_loss'
+  learning_rate: 0.1
+  n_estimators: 100
+feature_params:
+  deleted_features: ['fbs']
+  target_column: 'condition'
+  normalize_features: ['age', 'trestbps', 'chol', 'thalach', 'oldpeak']
