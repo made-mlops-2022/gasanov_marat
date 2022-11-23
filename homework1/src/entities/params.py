@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from marshmallow_dataclass import class_schema
 import yaml
-from entities.training_params import TrainingParams
-from entities.feature_params import FeatureParams
+from src.entities.training_params import TrainingParams
+from src.entities.feature_params import FeatureParams
 
 
 @dataclass()
