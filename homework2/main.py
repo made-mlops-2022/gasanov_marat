@@ -15,8 +15,8 @@ async def index():
 
 @app.post('/predict/')
 async def get_predict(input_item: HumanModel):
-    query_predict(input_item)
-    return f'{input_item}'
+    responce = query_predict(input_item)
+    return responce
 
 
 @app.get('/heath/')
