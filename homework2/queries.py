@@ -26,3 +26,9 @@ def query_predict(human_model: HumanModel):
     src.run_predict(MODEL_PATH, csv_path, 'predicted.csv')
     with open('predicted.csv') as f:
         return int(f.read()[5])
+
+
+def query_health():
+    if os.path.exists(MODEL_PATH):
+        return True
+    return False

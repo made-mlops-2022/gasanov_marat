@@ -21,7 +21,6 @@ class HumanModel(BaseModel):
     exang: int
     oldpeak: float
     slope: int
-    slope: int
     ca: int
     thal: int
 

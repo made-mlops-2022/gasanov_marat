@@ -3,7 +3,7 @@ import dataclasses
 from fastapi import FastAPI
 import uvicorn
 from human_model import HumanModel
-from queries import query_predict
+from queries import query_predict, query_health
 
 app = FastAPI()
 
@@ -15,13 +15,14 @@ async def index():
 
 @app.post('/predict/')
 async def get_predict(input_item: HumanModel):
+    print(input_item)
     responce = query_predict(input_item)
     return responce
 
 
-@app.get('/heath/')
+@app.get('/health/')
 async def get_heath():
-    return f'i am health'
+    return query_health()
 
 
 if __name__ == '__main__':
