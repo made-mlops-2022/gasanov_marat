@@ -7,9 +7,9 @@ from human_model import HumanModel
 
 if __name__ == '__main__':
     NUM_EXAMPLES = 10
-    response = requests.get('http://127.0.0.1:8000/health')
-    # make_json_examples(NUM_EXAMPLES)
-    print(f'health responce = {response.json()}')
+    # response = requests.get('http://127.0.0.1:8000/health')
+    make_json_examples(NUM_EXAMPLES)
+    # print(f'health responce = {response.json()}')
     for i in range(NUM_EXAMPLES):
         with open(f'json_examples/example_{i}.json') as json_file:
             data = json.load(json_file)

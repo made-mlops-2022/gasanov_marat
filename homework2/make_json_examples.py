@@ -1,4 +1,6 @@
 import json
+import os
+
 import numpy as np
 
 
@@ -17,6 +19,7 @@ def make_json_examples(random_seed=1, number_examples=10):
     slope = np.random.randint(0, 3, number_examples)  # slope
     ca = np.random.randint(0, 4, number_examples)  # ca
     thal = np.random.randint(0, 3, number_examples)  # thal
+    os.mkdir('json_examples')
     for i in range(number_examples):
         example_dict = {'age': int(age[i]),
                         'sex': int(sex[i]),

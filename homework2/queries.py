@@ -1,14 +1,8 @@
 import os.path
 import sys
-
-import pandas as pd
-
 from human_model import HumanModel
 import csv
-
-# sys.path.append('../homework1/')
-# sys.path.insert(1, '/../homework1')
-sys.path[1] += '/../homework1'
+sys.path.append('../homework1')
 import src
 
 MODEL_PATH = '../homework1/models/model.pkl'
