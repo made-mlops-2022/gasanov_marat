@@ -1,20 +1,22 @@
-import os
-import pandas as pd
-
 import click
+import src.entities as entities
+import sys
+import src.data as data
+import src.features as features
+import pickle
+import src.models as models
 
 
-@click.command("predict")
-@click.option("--input-dir")
-@click.option("--output-dir")
-def predict(input_dir: str, output_dir):
-    data = pd.read_csv(os.path.join(input_dir, "data.csv"))
-    # do real predict instead
-    data["predict"] = 1
-
-    os.makedirs(output_dir, exist_ok=True)
-    data.to_csv(os.path.join(output_dir, "data.csv"))
+@click.command('predict')
+@click.argument('model_path')
+@click.argument('input_data_path')
+@click.argument('output_data_path')
+def run_predict(model_path: str, input_data_path: str, output_data_path: str):
+    dataframe = data.read_csv_data(input_data_path)
+    with open(model_path, 'rb') as f:
+        model = pickle.load(f)
+    models.predict_to_csv(model, dataframe, output_data_path)
 
 
 if __name__ == '__main__':
-    predict()
+    run_predict()

@@ -35,11 +35,10 @@ def make_dataframe(random_seed: int, number_elements: int, predict=False) -> pd.
 @click.command("download")
 @click.argument("output_dir")
 def make_csv_dataset(output_dir: str):
-    number_elements = 100
     random_seed = 1
-    predict = False
     os.makedirs(output_dir, exist_ok=True)
-    make_dataframe(random_seed, number_elements, predict).to_csv(f'{output_dir}/data.csv')
+    make_dataframe(random_seed, number_elements=100, predict=False).to_csv(f'{output_dir}/data.csv', index=False)
+    make_dataframe(random_seed, number_elements=10, predict=True).to_csv(f'{output_dir}/to_predict.csv', index=False)
 
 
 if __name__ == '__main__':

@@ -16,11 +16,11 @@ def preprocess(input_dir: str, output_dir):
     test_features, test_target = features.extract_target(test_dataset, 'condition')
 
     os.makedirs(output_dir, exist_ok=True)
-    train_features.to_csv(f'{output_dir}/train_features.csv')
-    train_target.to_csv(f'{output_dir}/train_target.csv')
+    train_features.to_csv(f'{output_dir}/train_features.csv', index=False)
+    train_target.to_csv(f'{output_dir}/train_target.csv', index=False)
 
-    test_features.to_csv(f'{output_dir}/test_features.csv')
-    test_target.to_csv(f'{output_dir}/test_target.csv')
+    test_features.to_csv(f'{output_dir}/test_features.csv', index=False)
+    test_target.to_csv(f'{output_dir}/test_target.csv', index=False)
 
 
 if __name__ == '__main__':
