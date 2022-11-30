@@ -1,8 +1,8 @@
-import models
+import src.models as models
 import sys
-import data
-import entities
-import features
+import src.data as data
+import src.entities as entities
+import src.features as features
 import logging
 
 logger = logging.getLogger(__name__)

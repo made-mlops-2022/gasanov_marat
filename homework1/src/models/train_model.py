@@ -4,7 +4,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import GradientBoostingClassifier
 import pickle
 from sklearn.pipeline import Pipeline
-from entities import TrainingParams
+from src.entities import TrainingParams
 
 
 def train_model(features: pd.DataFrame,
