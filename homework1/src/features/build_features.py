@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from entities import FeatureParams
+from src.entities import FeatureParams
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import Normalizer

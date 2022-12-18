@@ -1,9 +1,9 @@
-import entities
+import src.entities as entities
 import sys
-import data
-import features
+import src.data as data
+import src.features as features
 import pickle
-import models
+import src.models as models
 
 
 def run_predict(model_path: str, input_data_path: str, output_data_path: str):
