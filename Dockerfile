@@ -7,6 +7,7 @@ COPY . ./project
 
 WORKDIR /project
 
+EXPOSE 8000
 RUN pip3 install -r requirements.txt
 RUN apt update && apt install make
 WORKDIR /project/homework2

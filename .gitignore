@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 .idea
 */*cache*/*
+/homework2/json_examples

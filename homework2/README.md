@@ -15,10 +15,11 @@ docker pull gassanov/mlops:2.0
 
 запуск контейнера:
 ~~~
-docker run --name rest_service gassanov/mlops:2.0
+docker run --name rest_service -p 8000:8000 gassanov/mlops:2.0
 ~~~
 
 запуск скрипта в контейнере:
 ~~~
-docker container exec -it rest_service make requests           
+cd homework2
+make requests           
 ~~~
